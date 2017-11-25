@@ -1,0 +1,16 @@
+{% extends 'acount_app/base.html' %} 
+{% block title_block %}Login{% endblock %}
+
+{% block body_block %}
+<div class="container">
+    <h1>Log-in</h1>
+    <p>Please, use the following form to log-in</p>
+
+    <form action="{% url 'acount_app:user_login' %}" method="POST">
+        {% csrf_token %}
+        {{user_form.as_p}}
+        <p><input type="submit" value="Login"></p>
+    </form>
+</div>
+
+{% endblock  %}
