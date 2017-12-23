@@ -20,6 +20,6 @@ from acount_app import views
 urlpatterns = [
     url(r'^$', views.index, name="index"),
     url(r'^admin/', admin.site.urls),
-    url(r'^home/', include("acount_app.urls", namespace ='acount_app')),
+    url(r'^home/', include("acount_app.urls", namespace='acount_app')),
     url(r'^logout/', views.user_logout, name='logout'),
 ]
